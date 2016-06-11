@@ -8,20 +8,20 @@ if exist bin\php\php.exe (
 )
 
 
-	if exist 坊主が野原でサバを蒸す.php (
-		set BOUZU_FILE=坊主が野原でサバを蒸す.php
+	if exist BOWZU.php (
+		set BOWZU_FILE=BOWZU.php
 	) else (
-		echo "Couldn't find a valid 坊主が野原でサバを蒸す installation"
+		echo "Couldn't find a valid BOWZU installation"
 		pause
 		exit 1
 	)
 
 #if exist bin\php\php_wxwidgets.dll (
-#	%PHP_BINARY% %BOUZU_FILE% --enable-gui %*
+#	%PHP_BINARY% %BOWZU_FILE% --enable-gui %*
 #) else (
 	if exist bin\mintty.exe (
-		start "" bin\mintty.exe -o Columns=88 -o Rows=32 -o AllowBlinking=0 -o FontQuality=3 -o Font="DejaVu Sans Mono" -o FontHeight=10 -o CursorType=0 -o CursorBlinks=1 -h error -t "坊主が野原でサバを蒸す" -w max %PHP_BINARY% %BOUZU_FILE% --enable-ansi %*
+		start "" bin\mintty.exe -o Columns=88 -o Rows=32 -o AllowBlinking=0 -o FontQuality=3 -o Font="Lucida Sans Typewriter" -o FontHeight=16 -o CursorType=0 -o CursorBlinks=1 -h error -t "坊主が野原でサバを蒸す" -w max %PHP_BINARY% %BOWZU_FILE% --enable-ansi %*
 	) else (
-		%PHP_BINARY% -c bin\php %BOUZU_FILE% %*
+		%PHP_BINARY% -c bin\php %BOWZU_FILE% %*
 	)
 #)
